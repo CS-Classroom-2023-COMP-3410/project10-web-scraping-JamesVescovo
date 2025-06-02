@@ -21,7 +21,7 @@ axios.get(link)
 
         const words = courseName.split(' ');
         const courseInfo = words[0];
-        const courseNumber = parseInt(courseInfo.replace(/\s+/g, ' ').split(' ')[1]);
+        const courseNumber = parseInt(courseInfo.split(/\s+/g)[1]);
         console.log(courseNumber);
         const req = courseNumber >= 3000 && !courseDesc.toLowerCase().includes('prerequisite');
         if (req) {
